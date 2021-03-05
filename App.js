@@ -27,36 +27,19 @@ import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import store from './store';
-import LoginScreen from './pages/Login';
-import RegisterScreen from './pages/Register';
-import HomeScreen from './pages/Home';
+import TabNavigator from './components/templates/TabNavigator';
+import StackNavigator from './components/templates/StackNavigator';
 
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   const { user } = store.getState(); 
-  console.log('getState', user);
   return (
-    <Provider store={store}>      
-      { user.name ? 
+    <Provider store={store}>            
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Register" component={RegisterScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-      :
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen name="Home" component={HomeScreen} />
-
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Register" component={RegisterScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-      }
+        {/* { user.username ? <TabNavigator /> : <StackNavigator /> } */}
+        <TabNavigator />
+      </NavigationContainer>      
     </Provider>
   );
 };
