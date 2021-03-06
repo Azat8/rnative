@@ -1,3 +1,3 @@
-import modalConstants from '../constants/modal';
+import { modalActions } from '../constants/modal';
 
-export const toggleModal = open => ({ type: groupConstants.CREATE_GROUP, open });
+export const toggleModal = payload => ({ type: modalActions.TOGGLE, payload });

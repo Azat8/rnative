@@ -1,0 +1,9 @@
+export const modalTypes = {
+  CREATE_GROUP_MODAL: 'CREATE_GROUP_MODAL',
+  USER_LIST_MODAL: 'USER_LIST_MODAL',
+  CHANGE_GROUP_MODAL: 'CHANGE_GROUP_MODAL',
+}
+
+export const modalActions = {
+  TOGGLE: 'TOGGLE'
+}
