@@ -1,0 +1,105 @@
+const Gender = [
+  	'Fmale',
+  	'Male'
+];
+
+const ListDepartment = [
+	'Marketing',
+	'Support',
+	'Human Resources',
+	'Product Management',
+	'Human Resources',
+	'Services',
+	'Legal',
+	'Product Management',
+	'Legal',
+	'Services',
+	'Accounting',
+	'Support',
+	'Sales',
+	'Legal',
+	'Legal',
+	'Accounting',
+	'Product Management',
+	'Support',
+	'Human Resources',
+	'Human Resources',
+];
+
+
+const ListJob = [
+	'Analog Circuit Design manager',
+	'Web Designer II',
+	'Health Coach II',
+	'Senior Editor',
+	'Nuclear Power Engineer',
+	'Account Coordinator',
+	'Geological Engineer',
+	'Recruiting Manager',
+	'Speech Pathologist',
+	'Account Representative IV',
+	'Research Nurse',
+	'Systems Administrator III',
+	'Help Desk Technician',
+	'Senior Developer',
+	'Engineer IV',
+	'Computer Systems Analyst IV',
+	'Safety Technician I',
+	'Design Engineer',
+	'Programmer I',
+	'Compensation Analyst',
+]
+
+const ListCountry = [
+	'China',
+	'Japan',
+	'Armenia',
+	'Norway',
+	'Russia',
+	'Uganda',
+	'Russia',
+	'China',
+	'Egypt',
+	'Portugal',
+	'Russia',
+	'Honduras',
+	'Egypt',
+	'Nigeria',
+	'Portugal',
+	'China',
+	'Finland',
+	'Indonesia',
+	'Portugal',
+	'China',
+];
+
+const ListCity = [
+	'Damaying',
+	'Hirakata',
+	'Sevan',
+	'Drammen',
+	'Nytva',
+	'Entebbe',
+	'Cherkasskoye',
+	'Jinzhuang',
+	'Isnā',
+	'Foros de Salvaterra',
+	'Lyalichi',
+	'Marale',
+	'Dishnā',
+	'Gusau',
+	'Ortiga',
+	'Kanshi',
+	'Varkaus',
+	'Nobo',
+	'Pedrogão',
+	'Changfeng',
+];
+
+export {
+	Gender,
+	ListDepartment,
+	ListJob,
+	ListCountry,
+	ListCity
+}

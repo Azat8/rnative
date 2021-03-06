@@ -1,9 +1,16 @@
 import userConstants from '../constants/user';
 
 const initialState = {
-  username: '',
+  email: '',
+  gender: 0,
+  job: 0,
+  lastName: '',
+  firstName: '',
+  department: 0,
   password: '',
-  isLogedIn: false
+  isLogedIn: false,
+  step: 0,
+  cameraRotate: true,
 };
 
 export default (state = initialState, action) => {
@@ -23,6 +30,21 @@ export default (state = initialState, action) => {
         ...state,
         isLogedIn: false
       };
+  	case userConstants.USER_NEXT_STEP:
+  		return {
+        ...state,
+        step: state.step += 1
+      };
+  	case userConstants.USER_BACK_STEP:
+  		return {
+        ...state,
+        step: state.step -= 1
+      };
+    case userConstants.USER_CAMERA_ROTATE:
+      return {
+        ...state,
+        cameraRotate: !state.cameraRotate
+      };  
     default:
       return state
   }
