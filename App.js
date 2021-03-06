@@ -49,7 +49,7 @@ const App: () => React$Node = () => {
       </NavigationContainer>
       :
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Register">
           <Stack.Screen name="Home" component={HomeScreen} />
 
           <Stack.Screen name="Login" component={LoginScreen} />
