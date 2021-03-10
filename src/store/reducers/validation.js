@@ -36,13 +36,11 @@ export default (state = initialState, action) => {
         cameraRotate: !state.cameraRotate
       }; 
     case userConstants.USER_UPDATE:
-      console.log("Update User: ", action.payload);
       const updated = {
         ...state,
         ...action.payload,
       };
 
-      console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@', updated, action.payload);
       return updated;   
     default:
       return state
