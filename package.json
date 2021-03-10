@@ -6,23 +6,33 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "startbook": "react-native ddddrr -- --story-book",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook",
+    "prestorybook": "rnstl"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-picker/picker": "^1.9.11",
     "@react-navigation/bottom-tabs": "^5.11.8",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
     "native-base": "^2.15.2",
     "react": "16.13.1",
+    "react-geocode": "^0.2.3",
     "react-native": "0.63.4",
-    "react-native-camera": "^3.43.0",
+    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-get-location": "^2.0.0",
+    "react-native-picker-select": "^8.0.4",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.18.1",
+    "react-native-storybook-loader": "^2.0.2",
     "react-native-vector-icons": "^8.1.0",
+    "react-native-web": "^0.15.0",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
@@ -33,13 +43,33 @@
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "babel-jest": "^25.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "react-dom": "^16.13.1",
+    "react-native-dotenv": "^2.5.3",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src",
+        "./packages"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
   }
 }
